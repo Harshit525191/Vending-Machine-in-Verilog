@@ -1,18 +1,21 @@
+`include "vending.v"
+
+
 module vending_tb;
 
     reg clk;
     reg reset;
-    reg [1:0] coin;
+    reg [1:0] coinn;
     wire out;
-    wire [1:0] change;
+    wire [1:0] changee;
 
     // Instantiate the vending machine module
-    vending uut (
+    vending uut(
         .clk(clk),
         .reset(reset),
-        .coin(coin),
+        .coinn(coinn),
         .out(out),
-        .change(change)
+        .changee(changee)
     );
 
     // Clock generation
@@ -26,16 +29,16 @@ module vending_tb;
     initial begin
         $dumpfile("vending_tb.vcd");
         $dumpvars(0, vending_tb);
-        $monitor($time, " reset=%b coin=%b out=%b change=%b", reset, coin, out, change);
+        $monitor($time, " reset=%b coinn=%b out=%b changee=%b", reset, coinn, out, changee);
         // Initialize inputs
         reset = 1;
-        coin = 2'b00;
+        coinn = 2'b00;
         #10 reset = 0;
-        #20 coin = 2'b01; 
-        #20 coin = 2'b00; 
-        #20 coin = 2'b01; 
-        #20 coin = 2'b10; 
-        #20 coin = 2'b10; 
+        #20 coinn = 2'b01; 
+        #20 coinn = 2'b00; 
+        #20 coinn = 2'b01; 
+        #20 coinn = 2'b10; 
+        #20 coinn = 2'b10; 
         
         $finish;
     end
