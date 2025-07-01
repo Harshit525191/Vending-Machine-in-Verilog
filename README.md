@@ -1,6 +1,6 @@
 #  Vending Machine in Verilog
 
-This repository contains a simple Verilog implementation of a vending machine that dispenses an item worth ₹15. It accepts ₹0, ₹5 and ₹10 coins, keeps track of inserted amounts, dispenses the item when ₹15 is reached, and returns change if needed.
+This repository provides a basic Verilog implementation of a vending machine. The machine dispenses an item priced at ₹15. It accepts coins of ₹0, ₹5, and ₹10 denominations, continuously tracks the total amount inserted, and dispenses the item once ₹15 or more has been received. If the inserted amount exceeds ₹15, it also returns the appropriate change.
 
 **#Features**
 
